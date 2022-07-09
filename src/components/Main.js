@@ -1,13 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
+import { getUserAuth } from '../actions'
+import PostModal from './PostModal'
+import { useState } from 'react'
 
-const Main = () => {
+const Main = (props) => {
+    const [showModal, setShowModal]= useState("close");
+
+const handleClick = (e) => {
+    e.preventDefault();
+    if (e.target !== e.currentTarget) {
+        return
+    }
+    switch (showModal){
+        case"open":
+        setShowModal("close")
+        break
+        case "close":
+            setShowModal("open")
+            break;
+        default:
+            setShowModal("close")
+            break;
+    }
+}
+
     return (
         <Container>
             <ShareBox>
                 <div>
-                    <img src='/images/user.svg'></img>
-                    <button>Start a Post</button>
+                {props.user && props.user.photoURL ? (<img src={props.user.photoURL} />) : (<img src='/images/user.svg' />)} 
+                    <button onClick={handleClick}>Start a Post</button>
                 </div>
                 <div>
                     <button>
@@ -89,6 +113,7 @@ The link to the article has been shared in the comments!</Description>
 
                     </Article>
             </div>
+            <PostModal showModal={showModal} handleClick={handleClick}></PostModal>
         </Container>
     )
 }
@@ -305,4 +330,9 @@ button {
 }
 `;
 
-export default Main
+const mapStateToProps= (state) => {
+    return {
+      user:state.userState.user
+    }
+  }
+export default connect(mapStateToProps)(Main)
