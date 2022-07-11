@@ -2,7 +2,7 @@
 
 # NUST Connect
 
-NUST Connect is our online system designed to guide students and employers through the co-op process. A professional job-seeking online platform for students and alumni to connect and network with industry professionals and NUST Placement office.
+NUST Connect is our online system designed to guide students and employers through the co-op process. 
 
 ![Demo](demo.gif)
 
