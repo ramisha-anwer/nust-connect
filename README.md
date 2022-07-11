@@ -8,6 +8,8 @@ NUST Connect is our online system designed to guide students and employers throu
 
 **_Built using React JS, Redux, Firebase & Styled-Components_** within a week.
 
+UI is inspired by **LinkedIn**
+
 ## 🚀 Objectives 
 
 
