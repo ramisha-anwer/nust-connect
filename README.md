@@ -9,24 +9,34 @@ NUST Connect is our online system designed to guide students and employers throu
 **_Built using React JS, Redux, Firebase & Styled-Components_** within a week.
 
 ## 🚀 Objectives 
-👉 Students can collaborate with each other to work on a project.
-👉 NPO can post job/internship opportunities for students. 
-👉 Alumni can refer students for job openings in their current organisation. 
-👉 Students can create their profile to showcase their skills and upload resumes. 
-👉 Hiring managers can find candidates with appropriate skills/experience.
-👉 Employers can schedule interviews . 
-👉 A Community place where students share their experience, guide and discuss academic/professional concerns.
+
+
+👉 Students can collaborate with each other to work on a project. <br/>
+👉 NPO can post job/internship opportunities for students. <br/>
+👉 Alumni can refer students for job openings in their current organisation. <br/>
+👉 Students can create their profile to showcase their skills and upload resumes. <br/>
+👉 Hiring managers can find candidates with appropriate skills/experience.<br/>
+👉 Employers can schedule interviews . <br/>
+👉 A Community place where students share their experience, guide and discuss academic/professional concerns.<br/>
 
 
 ## Features and Functionality
 
-📚 Login using Google (Firebase Authentication)
-📚   Create a new post
-📚   Share photos and videos (React player for videos)
-📚   Like posts
-📚   Realtime update likes and posts
-📚   Auto authenticate user on refresh
-📚   Sign Out
+📚 Login using Google (Firebase Authentication)<br/>
+📚   Create a new post<br/>
+📚   Share photos and videos (React player for videos)<br/>
+📚   Like posts<br/>
+📚   Realtime update likes and posts<br/>
+📚   Auto authenticate user on refresh<br/>
+📚   Sign Out<br/>
+
+## 💡Future Plans
+
+-   Add Employers Module 
+-   Schedule Interviews
+-   Student Applications tracking system
+-   Integrated Webcam feature for attending interviews
+-   employer  can submit performance evaluation
 
 ## How to build your own..?
 
@@ -80,12 +90,6 @@ NUST Connect is our online system designed to guide students and employers throu
 
 **That's it our project is up and running share it now**
 
-## 💡Future Plans
 
--   Add Employers Module 
--   Schedule Interviews
--   Student Applications tracking system
--   Integrated Webcam feature for attending interviews
--   employer  can submit performance evaluation
 
 **_NOTE: PLEASE LET ME KNOW IF YOU DISCOVERED ANY BUG OR YOU HAVE ANY SUGGESTIONS_**
