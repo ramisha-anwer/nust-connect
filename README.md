@@ -1,30 +1,32 @@
-<p align="center">##⚠️This Project is still under progress⚠️ </p>
+<p align="center">⚠️This Project is still under progress⚠️ </p>
 
 # NUST Connect
+
+NUST Connect is our online system designed to guide students and employers through the co-op process. A professional job-seeking online platform for students and alumni to connect and network with industry professionals and NUST Placement office.
 
 ![Demo](demo.gif)
 
 **_Built using React JS, Redux, Firebase & Styled-Components_** within a week.
 
 ## 🚀 Objectives 
-* Students can collaborate with each other to work on a project.
-* NPO can post job/internship opportunities for students. 
-* Alumni can refer students for job openings in their current organisation. 
-* Students can create their profile to showcase their skills and upload resumes. 
-* Hiring managers can find candidates with appropriate skills/experience.
-* Employers can schedule interviews . 
-* A Community place where students share their experience, guide and discuss academic/professional concerns.
+👉 Students can collaborate with each other to work on a project.
+👉 NPO can post job/internship opportunities for students. 
+👉 Alumni can refer students for job openings in their current organisation. 
+👉 Students can create their profile to showcase their skills and upload resumes. 
+👉 Hiring managers can find candidates with appropriate skills/experience.
+👉 Employers can schedule interviews . 
+👉 A Community place where students share their experience, guide and discuss academic/professional concerns.
 
 
 ## Features and Functionality
 
--   Login using Google (Firebase Authentication)
--   Create a new post
--   Share photos and videos (React player for videos)
--   Like posts
--   Realtime update likes and posts
--   Auto authenticate user on refresh
--   Sign Out
+📚 Login using Google (Firebase Authentication)
+📚   Create a new post
+📚   Share photos and videos (React player for videos)
+📚   Like posts
+📚   Realtime update likes and posts
+📚   Auto authenticate user on refresh
+📚   Sign Out
 
 ## How to build your own..?
 
@@ -76,12 +78,14 @@
         firebase deploy
         ```
 
-**That's it our clone is up and running share it now**
+**That's it our project is up and running share it now**
 
-## Future Plans
+## 💡Future Plans
 
--   Might add more login methods
--   Post deleting functionality
--   Add comments on post
+-   Add Employers Module 
+-   Schedule Interviews
+-   Student Applications tracking system
+-   Integrated Webcam feature for attending interviews
+-   employer  can submit performance evaluation
 
 **_NOTE: PLEASE LET ME KNOW IF YOU DISCOVERED ANY BUG OR YOU HAVE ANY SUGGESTIONS_**
