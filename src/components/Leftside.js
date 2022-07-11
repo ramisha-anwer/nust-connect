@@ -2,13 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux';
 import styled from 'styled-components'
 const leftside = (props) => {
+  let photoUrl = props.user.photoURL ? props.user.photoURL : "/images/user.svg";
   return (
     <Container>
       <ArtCard>
         <UserInfo>
           <CardBackground />
           <a>
-            <Photo />
+            <Photo photoUrl={photoUrl} />
             <Link>Welcome, {props.user? props.user.displayName : 'there'}!</Link>
           </a>
           <a>
@@ -25,10 +26,25 @@ const leftside = (props) => {
         </Widget>
         <Item>
           <span>
+            Dashboard
             
-            My Items
-            <img src="/images/item-icon.svg" alt="" />
           </span>
+          </Item>
+          <Item>
+          <span>
+            Hire NUST co-op
+          </span>
+          </Item>
+          <Item>
+          <span>
+          My Applications
+            
+          </span>
+          </Item>
+          <Item>
+          <span>
+            Help
+            </span>
         </Item>
         </UserInfo>
         </ArtCard>
@@ -86,14 +102,14 @@ const CardBackground = styled.div`
 
 const Photo = styled.div`
   box-shadow: none;
-  background-image: url("/images/photo.svg");
+  background-image: url(${props => props.photoUrl});;
   width: 72px;
   height: 72px;
   box-sizing: border-box;
   background-clip: content-box;
   background-color: white;
   background-position: center;
-  background-size: 60%;
+  /* background-size: 60%; */
   background-repeat: no-repeat;
   border: 2px solid white;
   margin: -38px auto 12px;
@@ -154,17 +170,22 @@ const Item = styled.a`
   border-color: rgba(0, 0, 0, 0.8);
   text-align: left;
   padding: 12px;
-  font-size: 12px;
+  font-size: 14px;
   display: block;
+
   span {
     display: flex;
     align-items: center;
     color: rgba(0, 0, 0, 1);
     justify-content: space-between;
-
+    &:hover {
+      color: #0a66c2;
+      cursor: pointer;
+    }
   }
   &:hover {
     background-color: rgba(0, 0, 0, 0.08);
+
   }
 `;
 

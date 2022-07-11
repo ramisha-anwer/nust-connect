@@ -13,13 +13,12 @@ const Home = (props) => {
     <Container>
       {!props.user && <Navigate to='/' /> }
       <Section>
+      
         <h5>
-          <a>Hiring in a hurry? - </a>
+        <Link>Welcome, {props.user? props.user.displayName : 'there'}!</Link>
+          <a>Hire NUST students and alumni </a>
         </h5>
-        <p>
-          Find talented pros in record time with Upwork and keep business
-          moving.
-        </p>
+        
       </Section>
       <Layout>
         <Leftside />
@@ -47,12 +46,13 @@ const Section = styled.section`
   padding: 16px 0;
   box-sizing: content-box;
   text-align: center;
-  text-decoration: underline;
+  
   display: flex;
   justify-content: center;
   h5 {
     color: #0a66c2;
     font-size: 14px;
+    text-decoration: underline;
     a {
       font-weight: 700;
     }
@@ -61,6 +61,7 @@ const Section = styled.section`
     font-size: 14px;
     color: #434649;
     font-weight: 600;
+    text-decoration: none;
   }
   @media (max-width: 768px) {
     flex-direction: column;
@@ -81,6 +82,13 @@ const Layout = styled.div`
     flex-direction: column;
     padding: 0 5px;
   }
+`;
+
+const Link = styled.div`
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 600;
 `;
 
 const mapStateToProps = (state) => {

@@ -30,25 +30,25 @@ const Header = (props) => {
                 <span>Home</span>
               </a>
             </NavList>
-            <NavList className="active">
+            <NavList className="">
               <a>
                 <img src="/images/nav-network.svg" alt="" />
                 <span>My Network</span>
               </a>
             </NavList>
-            <NavList className="active">
+            <NavList className="">
               <a>
                 <img src="/images/nav-jobs.svg" alt="" />
                 <span>Jobs</span>
               </a>
             </NavList>
-            <NavList className="active">
+            <NavList className="">
               <a>
                 <img src="/images/nav-messaging.svg" alt="" />
                 <span>Messages</span>
               </a>
             </NavList>
-            <NavList className="active">
+            <NavList className="">
               <a>
                 <img src="/images/nav-notifications.svg" alt="" />
                 <span>Notifications</span>
@@ -57,7 +57,8 @@ const Header = (props) => {
 
             <User>
             <a>
-              {props.user && props.user.photoURL ? (<img src={props.user.photoURL} />) : (<img src='/images/user.svg' />)} 
+
+              { props.user && props.user.photoURL ? (<img src={props.user.photoURL} />) : (<img src='/images/user.svg' />)} 
                 <span>Me
                 <img src='/images/down-icon.svg' />
                 </span>
@@ -188,6 +189,7 @@ const NavList = styled.li`
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
+  cursor: pointer;
   a {
     align-items: center;
     background: transparent;

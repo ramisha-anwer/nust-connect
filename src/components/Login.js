@@ -20,7 +20,7 @@ const Login = (props) => {
             </Nav>
             <Section>
         <Hero>
-          <h1>Welcome to NUST professional community</h1>
+          <h1>Welcome to NUST Connect <p> Our online system designed to guide students and employers through the co-op process. Login to find a job, schedule interviews and connect with your peers.</p></h1>
           <img src="/images/student.svg" alt="" />
         </Hero>
         <Form>
@@ -123,6 +123,12 @@ const Hero = styled.div`
       width: 100%;
       line-height: 2;
     }
+  }
+  p{
+    font-size: 20px;
+    text-align: justify;
+    margin: 20px;
+    line-height: normal;
   }
   img {
     /* z-index: -1; */

@@ -30,8 +30,9 @@ const handleClick = (e) => {
         <Container>
             <ShareBox>
                 <div>
+                    
                 {props.user && props.user.photoURL ? (<img src={props.user.photoURL} />) : (<img src='/images/user.svg' />)} 
-                    <button onClick={handleClick}>Start a Post</button>
+                    <button onClick={handleClick} disabled={props.loading? true:false}>Start a Post</button>
                 </div>
                 <div>
                     <button>
@@ -53,15 +54,19 @@ const handleClick = (e) => {
 
                 </div>
             </ShareBox>
-            <div>
+            <Content>
+                {  props.loading && <img src='./images/loading.png' />}
+            
+             
                 <Article>
                     <SharedActor>
                         <a>
-                        <img src='/images/user.svg'></img>
+                            
+                        {props.user && props.user.photoURL ? (<img src={props.user.photoURL} />) : (<img src='/images/user.svg' />)}
                         <div>
-                            <span>Title</span>
-                            <span>Info</span>
-                            <span>Date</span>
+                            <span>{props.user.displayName}</span>
+                            <span>Software Engineer | NUST'24</span>
+                            <span>27 June</span>
                         </div>
                         </a>
                         <button>
@@ -112,7 +117,7 @@ The link to the article has been shared in the comments!</Description>
                     </SocialAction>
 
                     </Article>
-            </div>
+                    </Content>
             <PostModal showModal={showModal} handleClick={handleClick}></PostModal>
         </Container>
     )
@@ -236,11 +241,12 @@ a{
             &:first-child{
                 font-size: 14px;
                 font-weight: 700;
-                columns: rgba(0, 0, 0 ,1);
+                color: black;
+                
             }
             &:nth-child(n+1){
-                font-size: 12px;
-                color: rgba(0,0,0,0.6);
+                font-size: 13px;
+                color: gre
             }
         }
     }
@@ -285,15 +291,24 @@ margin: 0 16px;
 padding: 8px 0;
 flex-wrap: nowrap;
 list-style: none;
-
+justify-content: space-between;
 li {
     margin-left: 5px;
-    font-size: 12px;
+    margin-right: 10px;
+    font-size: 14px;
+    &:hover {
+        color:#0a66c2;
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }
 
 button {
 display: flex;
 align-items: center;
+background-color: aliceblue;
+border: 1px solid rgb(0,0,0,0.7);
+border-radius: 5px;
 img {
     width: 20px;
     height: 20px;
@@ -304,7 +319,6 @@ img {
 
 const SocialAction = styled.div`
 align-items: center;
-width: 100%;
 display: flex;
 justify-content: flex-start;
 margin: 0;
@@ -314,8 +328,12 @@ button {
     align-items: center;
     display: flex;
     justify-content:flex-start;
-    padding: 8px;
+    padding: 5px;
     color: #0a66c2;
+    background-color: aliceblue;
+border: 1px solid rgb(0,0,0,0.7);
+border-radius: 5px;
+    
     @media (min-width: 768px) {
         span{
             display: inline-block;
@@ -327,12 +345,25 @@ button {
         width: 50px;
         height: 20px;
     }
+    
+}
+`;
+
+const Content = styled.div`
+text-align:center;
+&> img {
+    width: 30px;
 }
 `;
 
 const mapStateToProps= (state) => {
     return {
-      user:state.userState.user
+      user:state.userState.user,
+      loading: state.articleState.loading
     }
   }
-export default connect(mapStateToProps)(Main)
+const mapDispatchToProps= (dispatch) => ({
+
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(Main)

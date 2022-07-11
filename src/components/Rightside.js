@@ -8,31 +8,28 @@ const Rightside = () => {
       <FollowCard>
         <Title>
 
-          <h2>Add to your feed</h2>
+          <h2>Recent Job Postings</h2>
           <img src="/images/feed-icon.svg" alt="" />
         </Title>
         <FeedList>
           <li>
-            <a>
-              <Avatar />
-            </a>
-            <div>
-              <span>#Linkedin</span>
-              <button>Follow</button>
-            </div>
+    
+            <span>
+              <img src='/images/job.svg' />
+              <p><h2>Netsol Technologies </h2> Senior React developer</p>
+              
+            </span>
           </li>
           <li>
-            <a>
-              <Avatar />
-            </a>
-            <div>
-              <span>#Video</span>
-              <button>Follow</button>
-            </div>
+            
+          <span>
+              <img src='/images/job.svg' />
+              <p><h2>Netsol Technologies</h2> Social Media Manager</p>
+            </span>
           </li>
         </FeedList>
         <Recommendation>
-          View all recommendations
+          View all 
           <img src="/images/right-icon.svg" alt="" />
         </Recommendation>
         </FollowCard>
@@ -67,6 +64,7 @@ const Title = styled.div`
   font-size: 16px;
   width: 100%;
   color: rgba(0, 0, 0, 0.6);
+  
 `;
 const FeedList = styled.ul`
   margin-top: 16px;
@@ -96,11 +94,28 @@ const FeedList = styled.ul`
       text-align: center;
       outline: none;
     }
+    span {
+      display: flex;
+      align-items: center;
+      
+      p{
+        left: 0px;
+        
+        h2{
+          color: #064479;
+          margin-left:-10px;
+        }
+      }
+      img{
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
   }
 `;
 
 const Avatar = styled.div`
-  background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
+  background-image: '/images/job.svg';
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -113,6 +128,11 @@ const Recommendation = styled.a`
   display: flex;
   align-items: center;
   font-size: 14px;
+&:hover {
+  text-decoration: underline;
+  cursor:pointer ;
+}
+
 `;
 
 const BannerCard = styled(FollowCard)`
