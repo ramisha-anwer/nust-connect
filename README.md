@@ -4,6 +4,8 @@
 
 NUST Connect is our online system designed to guide students and employers through the co-op process. 
 
+## Demo 
+
 ![Demo](demo.gif)
 
 **_Built using React JS, Redux, Firebase & Styled-Components_** within a week.
